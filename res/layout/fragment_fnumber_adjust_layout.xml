@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/fnumber_layout_parent" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:orientation="vertical" android:id="@id/beauty_lens_list_layout" android:visibility="gone" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="@dimen/light_recyclerview_height">
+        <miuix.recyclerview.widget.RecyclerView android:layout_gravity="bottom|center" android:id="@id/beauty_lens_list" android:focusable="false" android:visibility="gone" android:clickable="false" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/beautycamera_makeup_item_margin" android:layout_marginBottom="@dimen/beautycamera_makeup_item_margin" />
+    </FrameLayout>
+    <FrameLayout android:orientation="vertical" android:id="@id/fnumber_slider_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/beauty_lens_list_layout" android:layout_marginStart="@dimen/manual_popup_camera_adjust_distance_size" android:layout_marginEnd="@dimen/manual_popup_camera_adjust_distance_size">
+        <com.android.camera.ui.HorizontalZoomView android:id="@id/fnumber_slider" android:paddingLeft="@dimen/zoom_popup_padding_left" android:paddingRight="@dimen/zoom_popup_padding_left" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/manual_popup_layout_height" app:center_y_marginbottom="@dimen/zoom_popup_horizontalview_center_padbottom" />
+        <TextView android:textSize="@dimen/beauty_lens_fnumber_text_size" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/beauty_lens_bottom_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/manual_popup_layout_height" android:text="@string/beauty_lens" />
+    </FrameLayout>
+</RelativeLayout>

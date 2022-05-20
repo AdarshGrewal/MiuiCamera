@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="custom_sound_recyclerview_column">3</integer>
+    <integer name="debug_1">1860</integer>
+    <integer name="more_mode_max_icon_count_per_lines">4</integer>
+</resources>

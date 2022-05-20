@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="@dimen/presentation_split_line_padding" android:right="@dimen/presentation_split_line_padding">
+        <shape android:shape="rectangle">
+            <size android:height="@dimen/presentation_split_line_height" android:width="@dimen/presentation_split_line_width" />
+            <solid android:color="#80ffffff" />
+        </shape>
+    </item>
+</layer-list>

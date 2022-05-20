@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="a_hour_ago">
+        <item quantity="other">Pred 1 hodinou</item>
+        <item quantity="one">Pred 1 hodinou</item>
+        <item quantity="few">Pred 1 hodinou</item>
+        <item quantity="many">Pred 1 hodinou</item>
+    </plurals>
+    <plurals name="abbrev_a_hour_ago">
+        <item quantity="other">Pred 1 hodinou</item>
+        <item quantity="one">Pred 1 hodinou</item>
+        <item quantity="few">Pred 1 hodinou</item>
+        <item quantity="many">Pred 1 hodinou</item>
+    </plurals>
+    <plurals name="abbrev_half_hour_ago">
+        <item quantity="other">Pred pol hodinou</item>
+        <item quantity="one">Pred pol hodinou</item>
+        <item quantity="few">Pred pol hodinou</item>
+        <item quantity="many">Pred pol hodinou</item>
+    </plurals>
+    <plurals name="abbrev_in_a_hour">
+        <item quantity="other">Do hodiny</item>
+        <item quantity="one">Do hodiny</item>
+        <item quantity="few">Do hodiny</item>
+        <item quantity="many">Do hodiny</item>
+    </plurals>
+    <plurals name="abbrev_in_half_hour">
+        <item quantity="other">Do pol hodiny</item>
+        <item quantity="one">Do pol hodiny</item>
+        <item quantity="few">Do pol hodiny</item>
+        <item quantity="many">Do pol hodiny</item>
+    </plurals>
+    <plurals name="abbrev_in_less_than_one_minute">
+        <item quantity="other">Okamžite</item>
+        <item quantity="one">Okamžite</item>
+        <item quantity="few">Okamžite</item>
+        <item quantity="many">Okamžite</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item quantity="other">do %d min.</item>
+        <item quantity="one">do 1 min.</item>
+        <item quantity="few">do %d min.</item>
+        <item quantity="many">do %d min.</item>
+    </plurals>
+    <plurals name="abbrev_less_than_one_minute_ago">
+        <item quantity="other">Práve teraz</item>
+        <item quantity="one">Práve teraz</item>
+        <item quantity="few">Práve teraz</item>
+        <item quantity="many">Práve teraz</item>
+    </plurals>
+    <plurals name="abbrev_num_minutes_ago">
+        <item quantity="other">Pred %d minútami</item>
+        <item quantity="one">Pred 1 min.</item>
+        <item quantity="few">Pred %d min.</item>
+        <item quantity="many">Pred %d min.</item>
+    </plurals>
+    <plurals name="accessibility_focus_face_detect">
+        <item quantity="other">Zaostrené. Rozpoznaných %d tvárí</item>
+        <item quantity="one">Zaostrené. Rozpoznaná %d tvár</item>
+        <item quantity="few">Zaostrené. Rozpoznané %d tváre</item>
+        <item quantity="many">Zaostrené. Rozpoznanej %d tváre</item>
+    </plurals>
+    <plurals name="accessibility_timer_burst_count">
+        <item quantity="other">%d fotografií z dávkového snímania</item>
+        <item quantity="one">%d fotografia z dávkového snímania</item>
+        <item quantity="few">%d fotografie z dávkového snímania</item>
+        <item quantity="many">%d fotografie z dávkového snímania</item>
+    </plurals>
+    <plurals name="accessibility_timer_burst_interval">
+        <item quantity="other">Interval: %d sekúnd</item>
+        <item quantity="one">Interval: %d sekunda</item>
+        <item quantity="few">Interval: %d sekundy</item>
+        <item quantity="many">Interval: %d sekundy</item>
+    </plurals>
+    <plurals name="accessibility_vv_duartion">
+        <item quantity="other">Doba trvania: %d sekúnd</item>
+        <item quantity="one">Doba trvania: %d sekunda</item>
+        <item quantity="few">Doba trvania: %d sekundy</item>
+        <item quantity="many">Doba trvania: %d sekundy</item>
+    </plurals>
+    <plurals name="clone_guide_tip2">
+        <item quantity="other">Môžete vytvoriť až %d klonov naraz.</item>
+        <item quantity="one">Môžete vytvoriť až %d klon naraz.</item>
+        <item quantity="few">Môžete vytvoriť až %d klony naraz.</item>
+        <item quantity="many">Môžete vytvoriť až %d klonu naraz.</item>
+    </plurals>
+    <plurals name="exit_camera_hint">
+        <item quantity="other">&lt;Data>Nie je možné sa pripojiť k fotoaparátu.&lt;br>Aplikácia bude za &lt;font color=#FFCE16>&lt;b>%1$d sekúnd &lt;/b>&lt;/font> ukončená. Po ukončení aplikácie chvíľu počkajte a skúste to znova.&lt;/Data></item>
+        <item quantity="one">&lt;Data>Nie je možné sa pripojiť k fotoaparátu.&lt;br>Aplikácia bude za &lt;font color=#FFCE16>&lt;b>%1$d sekundu &lt;/b>&lt;/font> ukončená. Po ukončení aplikácie chvíľu počkajte a skúste to znova.&lt;/Data></item>
+        <item quantity="few">&lt;Data>Nie je možné sa pripojiť k fotoaparátu.&lt;br>Aplikácia bude za &lt;font color=#FFCE16>&lt;b>%1$d sekundy &lt;/b>&lt;/font> ukončená. Po ukončení aplikácie chvíľu počkajte a skúste to znova.&lt;/Data></item>
+        <item quantity="many">&lt;Data>Nie je možné sa pripojiť k fotoaparátu.&lt;br>Aplikácia bude za &lt;font color=#FFCE16>&lt;b>%1$d sekundy &lt;/b>&lt;/font> ukončená. Po ukončení aplikácie chvíľu počkajte a skúste to znova.&lt;/Data></item>
+    </plurals>
+    <plurals name="exit_thermal_hint">
+        <item quantity="other">&lt;Data>Toto zariadenie je teraz prehriate.&lt;br>Aplikácia sa zatvorí za &lt;font color=#FFCE16>&lt;b>%1$d sek.&lt;/b>&lt;/font>. Aktuálny priebeh sa uloží automaticky.&lt;/Data></item>
+        <item quantity="one">&lt;Data>Toto zariadenie je teraz prehriate.&lt;br>Aplikácia sa zatvorí za &lt;font color=#FFCE16>&lt;b>%1$d sek.&lt;/b>&lt;/font>. Aktuálny priebeh sa uloží automaticky.&lt;/Data></item>
+        <item quantity="few">&lt;Data>Toto zariadenie je teraz prehriate.&lt;br>Aplikácia sa zatvorí za &lt;font color=#FFCE16>&lt;b>%1$d sek.&lt;/b>&lt;/font>. Aktuálny priebeh sa uloží automaticky.&lt;/Data></item>
+        <item quantity="many">&lt;Data>Toto zariadenie je teraz prehriate.&lt;br>Aplikácia sa zatvorí za &lt;font color=#FFCE16>&lt;b>%1$d sek.&lt;/b>&lt;/font>. Aktuálny priebeh sa uloží automaticky.&lt;/Data></item>
+    </plurals>
+    <plurals name="fastmotion_pro_min_unit">
+        <item quantity="other">%1$d min.</item>
+        <item quantity="one">%1$d min.</item>
+        <item quantity="few">%1$d min.</item>
+        <item quantity="many">%1$d min.</item>
+    </plurals>
+    <plurals name="fastmotion_pro_sec_unit">
+        <item quantity="other">%1$d sek.</item>
+        <item quantity="one">%1$d sek.</item>
+        <item quantity="few">%1$d sek.</item>
+        <item quantity="many">%1$d sek.</item>
+    </plurals>
+    <plurals name="half_hour_ago">
+        <item quantity="other">Pred pol hodinou</item>
+        <item quantity="one">Pred pol hodinou</item>
+        <item quantity="few">Pred pol hodinou</item>
+        <item quantity="many">Pred pol hodinou</item>
+    </plurals>
+    <plurals name="in_a_hour">
+        <item quantity="other">Do hodiny</item>
+        <item quantity="one">Do hodiny</item>
+        <item quantity="few">Do hodiny</item>
+        <item quantity="many">Do hodiny</item>
+    </plurals>
+    <plurals name="in_half_hour">
+        <item quantity="other">Do pol hodiny</item>
+        <item quantity="one">Do pol hodiny</item>
+        <item quantity="few">Do pol hodiny</item>
+        <item quantity="many">Do pol hodiny</item>
+    </plurals>
+    <plurals name="in_less_than_one_minute">
+        <item quantity="other">Okamžite</item>
+        <item quantity="one">Okamžite</item>
+        <item quantity="few">Okamžite</item>
+        <item quantity="many">Okamžite</item>
+    </plurals>
+    <plurals name="in_num_minutes">
+        <item quantity="other">do %d minút</item>
+        <item quantity="one">do 1 minúty</item>
+        <item quantity="few">do %d minút</item>
+        <item quantity="many">do %d minúty</item>
+    </plurals>
+    <plurals name="less_than_one_minute_ago">
+        <item quantity="other">Práve teraz</item>
+        <item quantity="one">Práve teraz</item>
+        <item quantity="few">Práve teraz</item>
+        <item quantity="many">Práve teraz</item>
+    </plurals>
+    <plurals name="live_workspace_delete_dialog_title">
+        <item quantity="other">Vymazať %1$d konceptov?</item>
+        <item quantity="one">Vymazať %1$d koncept?</item>
+        <item quantity="few">Vymazať %1$d koncepty?</item>
+        <item quantity="many">Vymazať %1$d konceptov?</item>
+    </plurals>
+    <plurals name="miuix_appcompat_items_selected">
+        <item quantity="other">Vybraných %d položiek</item>
+        <item quantity="one">Vybraná %d položka</item>
+        <item quantity="few">Vybrané %d položky</item>
+        <item quantity="many">Vybranej %d položky</item>
+    </plurals>
+    <plurals name="num_minutes_ago">
+        <item quantity="other">Pred %d minútami</item>
+        <item quantity="one">Pred 1 minútou</item>
+        <item quantity="few">Pred %d minútami</item>
+        <item quantity="many">Pred %d minútou</item>
+    </plurals>
+    <plurals name="pref_camera_fastmotion_duration_unit">
+        <item quantity="other">%1$s min.</item>
+        <item quantity="one">%1$s min.</item>
+        <item quantity="few">%1$s min.</item>
+        <item quantity="many">%1$s min.</item>
+    </plurals>
+    <plurals name="pref_live_duration_prompt">
+        <item quantity="other">Nahrať %d sekúnd</item>
+        <item quantity="one">Nahrať %d sekundu</item>
+        <item quantity="few">Nahrať %d sekundy</item>
+        <item quantity="many">Nahrať %d sekundy</item>
+    </plurals>
+    <plurals name="timefreeze_guide_tip1">
+        <item quantity="other">Videá s funkciou zmrazenia môžete natáčať iba s %d objektami.</item>
+        <item quantity="one">Videá s funkciou zmrazenia môžete natáčať iba s %d objektom.</item>
+        <item quantity="few">Videá s funkciou zmrazenia môžete natáčať iba s %d objektami.</item>
+        <item quantity="many">Videá s funkciou zmrazenia môžete natáčať iba s %d objektami.</item>
+    </plurals>
+    <plurals name="timer_burst_setting_total_count">
+        <item quantity="other">%1$s fotografií</item>
+        <item quantity="one">%1$s fotografia</item>
+        <item quantity="few">%1$s fotografie</item>
+        <item quantity="many">%1$s fotografie</item>
+    </plurals>
+    <plurals name="toast_burst_snap_finished_summary">
+        <item quantity="other">Dávkové fotografovanie dokončené, vytvorených %1$s záberov</item>
+        <item quantity="one">Dávkové fotografovanie dokončené, vytvorený %1$s záber</item>
+        <item quantity="few">Dávkové fotografovanie dokončené, vytvorené %1$s zábery</item>
+        <item quantity="many">Dávkové fotografovanie dokončené, vytvoreného %1$s záberu</item>
+    </plurals>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:id="@id/more_mode_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/open_scan_app" android:layout_width="@dimen/more_mode_tab_header_icon_size" android:layout_height="@dimen/more_mode_tab_header_icon_size" android:src="@drawable/ic_open_scan_app" android:contentDescription="@string/module_name_scanner" android:layout_marginEnd="@dimen/more_mode_tab_header_icon_margin_end" android:layout_alignParentEnd="true" />
+    <ImageView android:id="@id/more_tab_switch" android:layout_width="@dimen/more_mode_tab_header_icon_size" android:layout_height="@dimen/more_mode_tab_header_icon_size" android:contentDescription="@string/pref_customization_style" android:layout_marginEnd="@dimen/more_mode_tab_header_icon_gap" android:layout_toStartOf="@id/open_scan_app" />
+    <ImageView android:id="@id/more_mode_edit" android:background="@drawable/ic_more_mode_edit_shadow" android:layout_width="@dimen/more_mode_tab_header_icon_size" android:layout_height="@dimen/more_mode_tab_header_icon_size" android:src="@drawable/ic_more_mode_edit" android:contentDescription="@string/pref_customization_title" android:layout_marginEnd="@dimen/more_mode_tab_header_icon_gap" android:layout_toStartOf="@id/more_tab_switch" />
+</RelativeLayout>

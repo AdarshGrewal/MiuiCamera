@@ -1,0 +1,74 @@
+.class public Lcom/xiaomi/magicvideosky/MediaTrim;
+.super Ljava/lang/Object;
+.source "MediaTrim.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/xiaomi/magicvideosky/MediaTrim$Callback;
+    }
+.end annotation
+
+
+# static fields
+.field public static TAG:Ljava/lang/String; = "MediaTrim"
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static MediaTrim(Ljava/lang/String;Ljava/lang/String;JJIILcom/xiaomi/magicvideosky/MediaTrim$Callback;)I
+    .locals 2
+
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaTrim;->TAG:Ljava/lang/String;
+
+    const-string v1, "MediaTrim"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2
+    invoke-static/range {p0 .. p8}, Lcom/xiaomi/magicvideosky/MediaTrim;->MediaTrimJni(Ljava/lang/String;Ljava/lang/String;JJIILcom/xiaomi/magicvideosky/MediaTrim$Callback;)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static native MediaTrimJni(Ljava/lang/String;Ljava/lang/String;JJIILcom/xiaomi/magicvideosky/MediaTrim$Callback;)I
+.end method
+
+.method public static cancelMediaTrim(Ljava/lang/String;)I
+    .locals 2
+
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaTrim;->TAG:Ljava/lang/String;
+
+    const-string v1, "cancel MediaTrim "
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2
+    invoke-static {p0}, Lcom/xiaomi/magicvideosky/MediaTrim;->cancelmediatrimJni(Ljava/lang/String;)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static native cancelmediatrimJni(Ljava/lang/String;)I
+.end method

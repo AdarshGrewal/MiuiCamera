@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    暂时先放这里，等后续代码拆分完，在将这里的入口移动qigsaw的清单中。
+    不做成拼接的原因是方便AS定位入口类。
+    这里的配置请严格按照格式来：包名+功能名+入口类名。
+    方便后续移动
+    -->
+    <string name="capture">com.android.camera.features.mode.capture.CaptureModuleEntry</string>
+    <string name="video">com.android.camera.features.mode.video.VideoModuleEntry</string>
+    <string name="pro" type="photo">com.android.camera.features.mode.pro.photo.ProModuleEntry</string>
+    <string name="pro" type="video">com.android.camera.features.mode.pro.video.ProVideoModuleEntry</string>
+    <string name="portrait">com.android.camera.features.mode.portrait.PortraitModuleEntry</string>
+    <string name="night" type="photo">com.android.camera.features.mode.night.photo.NightModuleEntry</string>
+    <string name="night" type="video">com.android.camera.features.mode.night.video.NightVideoModuleEntry</string>
+    <string name="pixel">com.android.camera.features.mode.pixel.PixelModuleEntry</string>
+    <string name="milive">com.android.camera.features.mode.milive.MiLiveModuleEntry</string>
+    <string name="fun">com.android.camera.features.mode.fun.FunModuleEntry</string>
+    <string name="pano" face="back">com.android.camera.features.mode.pano.pano3.PanoModuleEntry</string>
+    <string name="pano" face="front">com.android.camera.features.mode.pano.wideselfie.WideSelfieModuleEntry</string>
+    <string name="doc">com.android.camera.features.mode.doc.DocModuleEntry</string>
+    <string name="idcard">com.android.camera.features.mode.idcard.IDCardModuleEntry</string>
+    <string name="slow">com.android.camera.features.mode.slow.SlowMotionModuleEntry</string>
+    <string name="fast">com.android.camera.features.mode.fast.FastMotionModuleEntry</string>
+    <string name="mimoji">com.android.camera.features.mode.mimoji.MimojiModuleEntry</string>
+    <string name="aiwatermark">com.android.camera.features.mode.aiwatermark.AIWaterModuleEntry</string>
+    <string name="ambilight">com.android.camera.features.mode.ambilight.AmbilightModuleEntry</string>
+    <string name="moon">com.android.camera.features.mode.moon.MoonModuleEntry</string>
+    <string name="dualcam">com.android.camera.features.mode.dualcam.DualCamModuleEntry</string>
+    <string name="vlog">com.android.camera.features.mode.vlog.VlogModuleEntry</string>
+    <string name="clone">com.android.camera.features.mode.clone.CloneModuleEntry</string>
+    <!--film-->
+    <string name="film" sub="longexp">com.android.camera.features.mode.film.delay.LongExpModuleEntry</string>
+    <string name="film" sub="dollyzoom">com.android.camera.features.mode.film.dollyzoom.DollyZoomModuleEntry</string>
+    <string name="film" sub="dream">com.android.camera.features.mode.film.dream.DreamModuleEntry</string>
+    <string name="film" sub="slowshutter">com.android.camera.features.mode.film.slowshutter.SlowShutterModuleEntry</string>
+    <string name="film" sub="timefreeze">com.android.camera.features.mode.film.timefreeze.TimeFreezeModuleEntry</string>
+    <!--more-->
+    <string name="more">com.android.camera.features.mode.more.MoreModuleEntry</string>
+    <string name="more" sub="film">com.android.camera.features.mode.more.film.MoreFilmModuleEntry</string>
+    <string name="more" sub="clone">com.android.camera.features.mode.more.clone.MoreCloneModuleEntry</string>
+    <string name="more" sub="vlog">com.android.camera.features.mode.more.vlog.MoreVVModuleEntry</string>
+    <string name="more" sub="uninstall">com.android.camera.features.mode.more.uninstall.MoreUnInstallModuleEntry</string>
+</resources>

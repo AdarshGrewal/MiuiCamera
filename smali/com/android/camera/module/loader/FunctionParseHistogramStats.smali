@@ -1,0 +1,276 @@
+.class public Lcom/android/camera/module/loader/FunctionParseHistogramStats;
+.super Ljava/lang/Object;
+.source "FunctionParseHistogramStats.java"
+
+# interfaces
+.implements Lio/reactivex/functions/Function;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lio/reactivex/functions/Function<",
+        "Landroid/hardware/camera2/CaptureResult;",
+        "[I>;"
+    }
+.end annotation
+
+
+# instance fields
+.field public mModule:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference<",
+            "Lcom/android/camera/module/Module;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public mStats:[I
+
+.field public mTopAlertProtocolWeakReference:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference<",
+            "Lcom/android/camera/protocol/ModeProtocol$TopAlert;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lcom/android/camera/module/Module;Lcom/android/camera/protocol/ModeProtocol$TopAlert;)V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/android/camera/module/loader/FunctionParseHistogramStats;->mModule:Ljava/lang/ref/WeakReference;
+
+    .line 3
+    new-instance p1, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lcom/android/camera/module/loader/FunctionParseHistogramStats;->mTopAlertProtocolWeakReference:Ljava/lang/ref/WeakReference;
+
+    const/4 p1, 0x0
+
+    new-array p1, p1, [I
+
+    .line 4
+    iput-object p1, p0, Lcom/android/camera/module/loader/FunctionParseHistogramStats;->mStats:[I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    .line 1
+    check-cast p1, Landroid/hardware/camera2/CaptureResult;
+
+    invoke-virtual {p0, p1}, Lcom/android/camera/module/loader/FunctionParseHistogramStats;->apply(Landroid/hardware/camera2/CaptureResult;)[I
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public apply(Landroid/hardware/camera2/CaptureResult;)[I
+    .locals 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/module/loader/FunctionParseHistogramStats;->mTopAlertProtocolWeakReference:Ljava/lang/ref/WeakReference;
+
+    if-nez v0, :cond_0
+
+    .line 3
+    iget-object p1, p0, Lcom/android/camera/module/loader/FunctionParseHistogramStats;->mStats:[I
+
+    return-object p1
+
+    .line 4
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
+
+    if-nez v0, :cond_1
+
+    .line 5
+    iget-object p1, p0, Lcom/android/camera/module/loader/FunctionParseHistogramStats;->mStats:[I
+
+    return-object p1
+
+    .line 6
+    :cond_1
+    iget-object v1, p0, Lcom/android/camera/module/loader/FunctionParseHistogramStats;->mModule:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-nez v1, :cond_2
+
+    .line 7
+    iget-object p1, p0, Lcom/android/camera/module/loader/FunctionParseHistogramStats;->mStats:[I
+
+    return-object p1
+
+    .line 8
+    :cond_2
+    iget-object v1, p0, Lcom/android/camera/module/loader/FunctionParseHistogramStats;->mModule:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    instance-of v1, v1, Lcom/android/camera/module/VideoModule;
+
+    if-eqz v1, :cond_3
+
+    .line 9
+    iget-object v1, p0, Lcom/android/camera/module/loader/FunctionParseHistogramStats;->mModule:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/camera/module/VideoModule;
+
+    goto :goto_0
+
+    .line 10
+    :cond_3
+    iget-object v1, p0, Lcom/android/camera/module/loader/FunctionParseHistogramStats;->mModule:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    instance-of v1, v1, Lcom/android/camera/module/Camera2Module;
+
+    if-eqz v1, :cond_8
+
+    .line 11
+    iget-object v1, p0, Lcom/android/camera/module/loader/FunctionParseHistogramStats;->mModule:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/camera/module/Camera2Module;
+
+    .line 12
+    :goto_0
+    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OoooOOo()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {v1}, Lcom/android/camera/module/Module;->getCameraManager()Lcom/android/camera/module/common/ICameraMgr;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcom/android/camera/module/common/ICameraMgr;->getCameraCapabilities()Lcom/android/camera2/CameraCapabilities;
+
+    move-result-object v1
+
+    invoke-static {v1, p1}, Lcom/android/camera2/CaptureResultParser;->isHistogramStatsEnabled(Lcom/android/camera2/CameraCapabilities;Landroid/hardware/camera2/CaptureResult;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    .line 13
+    iget-object p1, p0, Lcom/android/camera/module/loader/FunctionParseHistogramStats;->mStats:[I
+
+    return-object p1
+
+    .line 14
+    :cond_4
+    invoke-static {p1}, Lcom/android/camera2/CaptureResultParser;->getHistogramStats(Landroid/hardware/camera2/CaptureResult;)[I
+
+    move-result-object p1
+
+    if-eqz p1, :cond_7
+
+    .line 15
+    iput-object p1, p0, Lcom/android/camera/module/loader/FunctionParseHistogramStats;->mStats:[I
+
+    const/16 p1, 0x100
+
+    new-array v1, p1, [I
+
+    const/4 v2, 0x0
+
+    :goto_1
+    if-ge v2, p1, :cond_6
+
+    .line 16
+    iget-object v3, p0, Lcom/android/camera/module/loader/FunctionParseHistogramStats;->mStats:[I
+
+    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OoooOOo()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_5
+
+    move v4, v2
+
+    goto :goto_2
+
+    :cond_5
+    mul-int/lit8 v4, v2, 0x3
+
+    :goto_2
+    aget v3, v3, v4
+
+    aput v3, v1, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    .line 17
+    :cond_6
+    invoke-interface {v0, v1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->updateHistogramStatsData([I)V
+
+    .line 18
+    :cond_7
+    iget-object p1, p0, Lcom/android/camera/module/loader/FunctionParseHistogramStats;->mStats:[I
+
+    return-object p1
+
+    .line 19
+    :cond_8
+    iget-object p1, p0, Lcom/android/camera/module/loader/FunctionParseHistogramStats;->mStats:[I
+
+    return-object p1
+.end method

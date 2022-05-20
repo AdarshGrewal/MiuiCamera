@@ -1,0 +1,65 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: MiuiCamera.apk
+compressionType: false
+doNotCompress:
+- classes.dex
+- resources.arsc
+- assets/authpack/authpack.bin
+- webp
+- png
+- ogg
+- lib/arm64-v8a/libCameraEffectJNI.so
+- lib/arm64-v8a/libYuvWatermark.so
+- lib/arm64-v8a/libarc_layer_sgl.so
+- lib/arm64-v8a/libarcsoft_deflicker.so
+- lib/arm64-v8a/libcamera_960_mpbase.so
+- lib/arm64-v8a/libcamera_arcsoft_handgesture.so
+- lib/arm64-v8a/libcamera_handgesture_mpbase.so
+- lib/arm64-v8a/libcamera_sound_effect.so
+- lib/arm64-v8a/libcom.xiaomi.camera.requestutil.so
+- lib/arm64-v8a/libdeflicker_jni.so
+- lib/arm64-v8a/libhandengine.arcsoft.so
+- lib/arm64-v8a/libijkffmpeg.so
+- lib/arm64-v8a/libijkplayer.so
+- lib/arm64-v8a/libijksdl.so
+- lib/arm64-v8a/libmialgo_saliency.so
+- lib/arm64-v8a/libmialgo_saliency_jni.so
+- lib/arm64-v8a/libmisoundcamerasupport.so
+- lib/arm64-v8a/libmiuiblursdk.so
+- lib/arm64-v8a/libmulti-wakeup-engine.so
+- lib/arm64-v8a/libvideo_extra_color_converter.so
+- lib/arm64-v8a/libvideo_extra_interpolator.so
+- lib/armeabi-v7a/libCameraEffectJNI.so
+- lib/armeabi-v7a/libarc_layer_sgl.so
+- lib/armeabi-v7a/libcamera_arcsoft_handgesture.so
+- lib/armeabi-v7a/libcamera_handgesture_mpbase.so
+- lib/armeabi-v7a/libcamera_sound_effect.so
+- lib/armeabi-v7a/libhandengine.arcsoft.so
+- lib/armeabi-v7a/libmisoundcamerasupport.so
+- lib/armeabi-v7a/libmiuiblursdk.so
+- lib/armeabi-v7a/libmulti-wakeup-engine.so
+- jpg
+- mp3
+- mp4
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '28'
+  targetSdkVersion: '29'
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  MODULE_LICENSE_BSD: '8'
+  com/xiaomi/asr/engine/META-INF/MANIFEST.MF: '8'
+  miui/popupcamera/IPopupCameraManager.aidl: '8'
+  okhttp3/internal/publicsuffix/publicsuffixes.gz: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.6.0
+versionInfo:
+  versionCode: '430026109'
+  versionName: 4.3.002610.9

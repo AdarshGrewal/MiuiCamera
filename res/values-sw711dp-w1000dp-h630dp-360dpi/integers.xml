@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="custom_sound_recyclerview_column">4</integer>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="26.0sp" android:textColor="@color/colorBlack" android:layout_gravity="center_horizontal" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/warm_prompt" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/colorGrey" android:id="@id/user_conformation_tv" android:paddingLeft="15.0dip" android:paddingTop="15.0dip" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/prompt_desc" />
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="15.0dip" android:paddingTop="15.0dip" android:paddingRight="15.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/user_cancel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="1.0" />
+        <Button android:id="@id/user_confirm" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/confirm" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

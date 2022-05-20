@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="a_hour_ago">
+        <item quantity="other">Pred 1 uro</item>
+        <item quantity="one">Pred 1 uro</item>
+        <item quantity="two">Pred 1 uro</item>
+        <item quantity="few">Pred 1 uro</item>
+    </plurals>
+    <plurals name="abbrev_a_hour_ago">
+        <item quantity="other">Pred 1 uro</item>
+        <item quantity="one">Pred 1 uro</item>
+        <item quantity="two">Pred 1 uro</item>
+        <item quantity="few">Pred 1 uro</item>
+    </plurals>
+    <plurals name="abbrev_half_hour_ago">
+        <item quantity="other">Pred pol ure</item>
+        <item quantity="one">Pred pol ure</item>
+        <item quantity="two">Pred pol ure</item>
+        <item quantity="few">Pred pol ure</item>
+    </plurals>
+    <plurals name="abbrev_in_a_hour">
+        <item quantity="other">Čez 1 uro</item>
+        <item quantity="one">Čez 1 uro</item>
+        <item quantity="two">Čez 1 uro</item>
+        <item quantity="few">Čez 1 uro</item>
+    </plurals>
+    <plurals name="abbrev_in_half_hour">
+        <item quantity="other">Čez pol ure</item>
+        <item quantity="one">Čez pol ure</item>
+        <item quantity="two">Čez pol ure</item>
+        <item quantity="few">Čez pol ure</item>
+    </plurals>
+    <plurals name="abbrev_in_less_than_one_minute">
+        <item quantity="other">Takoj</item>
+        <item quantity="one">Takoj</item>
+        <item quantity="two">Takoj</item>
+        <item quantity="few">Takoj</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item quantity="other">čez %d minut</item>
+        <item quantity="one">čez 1 minuto</item>
+        <item quantity="two">čez %d minuti</item>
+        <item quantity="few">čez %d minut</item>
+    </plurals>
+    <plurals name="abbrev_less_than_one_minute_ago">
+        <item quantity="other">Pravkar</item>
+        <item quantity="one">Pravkar</item>
+        <item quantity="two">Pravkar</item>
+        <item quantity="few">Pravkar</item>
+    </plurals>
+    <plurals name="abbrev_num_minutes_ago">
+        <item quantity="other">Pred %d minut</item>
+        <item quantity="one">Pred 1 min</item>
+        <item quantity="two">Pred %d minutami</item>
+        <item quantity="few">Pred %d minut</item>
+    </plurals>
+    <plurals name="accessibility_focus_face_detect">
+        <item quantity="other">Osredotočen. %d zaznanih obrazov</item>
+        <item quantity="one">Osredotočen. %d zaznan obraz</item>
+        <item quantity="two">Osredotočen. %d zaznana obraza</item>
+        <item quantity="few">Osredotočen. %d zaznani obrazi</item>
+    </plurals>
+    <plurals name="accessibility_timer_burst_count">
+        <item quantity="other">%d slik zajetih v seriji slik</item>
+        <item quantity="one">%d slika zajeta v seriji slik</item>
+        <item quantity="two">%d sliki zajeti v seriji slik</item>
+        <item quantity="few">%d slik zajetih v seriji slik</item>
+    </plurals>
+    <plurals name="accessibility_timer_burst_interval">
+        <item quantity="other">Interval: %d sekund</item>
+        <item quantity="one">Interval: %d sekunda</item>
+        <item quantity="two">Interval: %d sekundi</item>
+        <item quantity="few">Interval: %d sekund</item>
+    </plurals>
+    <plurals name="accessibility_vv_duartion">
+        <item quantity="other">Trajanje: %d sekund</item>
+        <item quantity="one">Trajanje: %d sekunda</item>
+        <item quantity="two">Trajanje: %d sekundi</item>
+        <item quantity="few">Trajanje: %d sekund</item>
+    </plurals>
+    <plurals name="clone_guide_tip2">
+        <item quantity="other">Istočasno lahko ustvarite največ %d klonov.</item>
+        <item quantity="one">Istočasno lahko ustvarite največ %d klon.</item>
+        <item quantity="two">Istočasno lahko ustvarite največ %d klona.</item>
+        <item quantity="few">Istočasno lahko ustvarite največ %d klonov.</item>
+    </plurals>
+    <plurals name="exit_camera_hint">
+        <item quantity="other">&lt;Data>Ni se mogoče povezati s kamero.&lt;br>Aplikacija se bo zaprla čez &lt;font color=#FFCE16>&lt;b>%1$d sekund&lt;/b>&lt;/font>. Po tem počakajte minuto ali dve in poskusite ponovno.&lt;/Data></item>
+        <item quantity="one">&lt;Data>Ni se mogoče povezati s kamero.&lt;br>Aplikacija se bo zaprla čez &lt;font color=#FFCE16>&lt;b>%1$d sekundo&lt;/b>&lt;/font>. Po tem počakajte minuto ali dve in poskusite ponovno.&lt;/Data></item>
+        <item quantity="two">&lt;Data>Ni se mogoče povezati s kamero.&lt;br>Aplikacija se bo zaprla čez &lt;font color=#FFCE16>&lt;b>%1$d sekundi&lt;/b>&lt;/font>. Po tem počakajte minuto ali dve in poskusite ponovno.&lt;/Data></item>
+        <item quantity="few">&lt;Data>Ni se mogoče povezati s kamero.&lt;br>Aplikacija se bo zaprla čez &lt;font color=#FFCE16>&lt;b>%1$d sekunde&lt;/b>&lt;/font>. Po tem počakajte minuto ali dve in poskusite ponovno.&lt;/Data></item>
+    </plurals>
+    <plurals name="exit_thermal_hint">
+        <item quantity="other">&lt;Data>Naprava je prevroča.&lt;br>Aplikacija se bo zaprla čez &lt;font color=#FFCE16>&lt;b>%1$d sekund&lt;/b>&lt;/font>. Trenutni napredek je bil samodejno shranjen.&lt;/Data></item>
+        <item quantity="one">&lt;Data>Naprava je prevroča.&lt;br>Aplikacija se bo zaprla čez &lt;font color=#FFCE16>&lt;b>%1$d sekundo&lt;/b>&lt;/font>. Trenutni napredek je bil samodejno shranjen.&lt;/Data></item>
+        <item quantity="two">&lt;Data>Naprava je prevroča.&lt;br>Aplikacija se bo zaprla čez &lt;font color=#FFCE16>&lt;b>%1$d sekundi&lt;/b>&lt;/font>. Trenutni napredek je bil samodejno shranjen.&lt;/Data></item>
+        <item quantity="few">&lt;Data>Naprava je prevroča.&lt;br>Aplikacija se bo zaprla čez &lt;font color=#FFCE16>&lt;b>%1$d sekunde&lt;/b>&lt;/font>. Trenutni napredek je bil samodejno shranjen.&lt;/Data></item>
+    </plurals>
+    <plurals name="fastmotion_pro_min_unit">
+        <item quantity="other">%1$d minut</item>
+        <item quantity="one">%1$d minuta</item>
+        <item quantity="two">%1$d minuti</item>
+        <item quantity="few">%1$d minute</item>
+    </plurals>
+    <plurals name="fastmotion_pro_sec_unit">
+        <item quantity="other">%1$d sekund</item>
+        <item quantity="one">%1$d sekunda</item>
+        <item quantity="two">%1$d sekundi</item>
+        <item quantity="few">%1$d sekunde</item>
+    </plurals>
+    <plurals name="half_hour_ago">
+        <item quantity="other">Pred pol ure</item>
+        <item quantity="one">Pred pol ure</item>
+        <item quantity="two">Pred pol ure</item>
+        <item quantity="few">Pred pol ure</item>
+    </plurals>
+    <plurals name="in_a_hour">
+        <item quantity="other">Čez 1 uro</item>
+        <item quantity="one">Čez 1 uro</item>
+        <item quantity="two">Čez 1 uro</item>
+        <item quantity="few">Čez 1 uro</item>
+    </plurals>
+    <plurals name="in_half_hour">
+        <item quantity="other">Čez pol ure</item>
+        <item quantity="one">Čez pol ure</item>
+        <item quantity="two">Čez pol ure</item>
+        <item quantity="few">Čez pol ure</item>
+    </plurals>
+    <plurals name="in_less_than_one_minute">
+        <item quantity="other">Takoj</item>
+        <item quantity="one">Takoj</item>
+        <item quantity="two">Takoj</item>
+        <item quantity="few">Takoj</item>
+    </plurals>
+    <plurals name="in_num_minutes">
+        <item quantity="other">čez %d minut</item>
+        <item quantity="one">čez 1 minuto</item>
+        <item quantity="two">čez %d minuti</item>
+        <item quantity="few">čez %d minut</item>
+    </plurals>
+    <plurals name="less_than_one_minute_ago">
+        <item quantity="other">Pravkar</item>
+        <item quantity="one">Pravkar</item>
+        <item quantity="two">Pravkar</item>
+        <item quantity="few">Pravkar</item>
+    </plurals>
+    <plurals name="live_workspace_delete_dialog_title">
+        <item quantity="other">Želite izbrisati %1$d osnutkov?</item>
+        <item quantity="one">Želite izbrisati %1$d osnutek?</item>
+        <item quantity="two">Želite izbrisati %1$d osnutka?</item>
+        <item quantity="few">Želite izbrisati %1$d osnutke?</item>
+    </plurals>
+    <plurals name="miuix_appcompat_items_selected">
+        <item quantity="other">%d predmetov izbranih</item>
+        <item quantity="one">%d predmet izbran</item>
+        <item quantity="two">%d predmeta izbrana</item>
+        <item quantity="few">%d predmetov izbranih</item>
+    </plurals>
+    <plurals name="num_minutes_ago">
+        <item quantity="other">Pred %d minut</item>
+        <item quantity="one">pred 1 minuto</item>
+        <item quantity="two">Pred %d minutami</item>
+        <item quantity="few">Pred %d minut</item>
+    </plurals>
+    <plurals name="pref_camera_fastmotion_duration_unit">
+        <item quantity="other">%1$s min</item>
+        <item quantity="one">%1$s min</item>
+        <item quantity="two">%1$s min</item>
+        <item quantity="few">%1$s min</item>
+    </plurals>
+    <plurals name="pref_live_duration_prompt">
+        <item quantity="other">Zabeleži %d sekund</item>
+        <item quantity="one">Zabeleži %d sekundo</item>
+        <item quantity="two">Zabeleži %d sekundi</item>
+        <item quantity="few">Zabeleži %d sekunde</item>
+    </plurals>
+    <plurals name="timefreeze_guide_tip1">
+        <item quantity="other">Video zamrznjenega časa lahko posnamete samo z %d subjektov.</item>
+        <item quantity="one">Video zamrznjenega časa lahko posnamete samo z %d subjektom.</item>
+        <item quantity="two">Video zamrznjenega časa lahko posnamete samo z %d subjekta.</item>
+        <item quantity="few">Video zamrznjenega časa lahko posnamete samo z %d subjekta.</item>
+    </plurals>
+    <plurals name="timer_burst_setting_total_count">
+        <item quantity="other">%1$s fotografij</item>
+        <item quantity="one">%1$s fotografija</item>
+        <item quantity="two">%1$s fotografiji</item>
+        <item quantity="few">%1$s fotografij</item>
+    </plurals>
+    <plurals name="toast_burst_snap_finished_summary">
+        <item quantity="other">Serija slika je končana, %1$s slik je bilo zajeto</item>
+        <item quantity="one">Serija slika je končana, %1$s slika je bila zajeta</item>
+        <item quantity="two">Serija slika je končana, %1$s sliki sta bili zajeti</item>
+        <item quantity="few">Serija slika je končana, %1$s slike so bile zajete</item>
+    </plurals>
+</resources>

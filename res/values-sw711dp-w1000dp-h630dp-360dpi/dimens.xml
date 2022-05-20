@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="custom_tint_actionbar_height">44.439972dip</dimen>
+    <dimen name="custom_tint_color_item">43.549988dip</dimen>
+    <dimen name="custom_tint_color_item_outer">58.669983dip</dimen>
+    <dimen name="custom_tint_color_table_bottom_margin_full">35.549988dip</dimen>
+    <dimen name="custom_tint_color_table_margin">332.4375dip</dimen>
+    <dimen name="custom_tint_color_text_left_margin">328.4375dip</dimen>
+    <dimen name="custom_tint_color_use_right_margin">328.4375dip</dimen>
+    <dimen name="custom_tint_color_use_top_margin">28.439972dip</dimen>
+    <dimen name="custom_tint_preview_bottom_height_full">183.1dip</dimen>
+    <dimen name="custom_tint_preview_bottom_margin">35.549988dip</dimen>
+    <dimen name="custom_tint_preview_height_full">392.39844dip</dimen>
+    <dimen name="custom_tint_preview_top_margin">18.669983dip</dimen>
+    <dimen name="custom_tint_preview_width_full">627.89844dip</dimen>
+    <dimen name="more_mode_settings_padding_hor">222.0dip</dimen>
+    <dimen name="more_mode_settings_video_height">373.32812dip</dimen>
+    <dimen name="more_mode_settings_video_width">232.88998dip</dimen>
+    <dimen name="tint_AItip_font_select">8.889984sp</dimen>
+    <dimen name="tint_AItip_margin_top_select">73.78dip</dimen>
+    <dimen name="tint_text_margin_top_select">346.21875dip</dimen>
+    <dimen name="tint_text_select_font">8.889984dip</dimen>
+</resources>

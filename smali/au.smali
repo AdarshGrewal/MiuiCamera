@@ -1,0 +1,137 @@
+.class public final synthetic Lau;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lai;
+
+
+# instance fields
+.field public final a:Lba;
+
+
+# direct methods
+.method public constructor <init>(Lba;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lau;->a:Lba;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final OooO00o(Lbi;)V
+    .locals 5
+
+    const-string v0, "LensServiceConnImpl"
+
+    iget-object v1, p0, Lau;->a:Lba;
+
+    iget v2, p1, Lbi;->d:I
+
+    .line 1
+    invoke-static {v2}, Lbh;->OooO00o(I)I
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    sget v2, Lbh;->a:I
+
+    :cond_0
+    sget v3, Lbh;->b:I
+
+    if-ne v2, v3, :cond_2
+
+    new-instance p1, Landroid/content/Intent;
+
+    const-string v2, "com.google.android.apps.gsa.publicsearch.IPublicSearchService"
+
+    .line 2
+    invoke-direct {p1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v2, "com.google.android.googlequicksearchbox"
+
+    .line 3
+    invoke-virtual {p1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    const/4 v2, 0x7
+
+    :try_start_0
+    iget-object v3, v1, Lba;->b:Landroid/content/Context;
+
+    const/16 v4, 0x41
+
+    .line 4
+    invoke-virtual {v3, p1, v1, v4}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    const-string p1, "Unable to bind Lens service."
+
+    .line 5
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget p1, Lbh;->j:I
+
+    iput p1, v1, Lba;->h:I
+
+    .line 6
+    invoke-virtual {v1, v2}, Lba;->OooO00o(I)V
+
+    return-void
+
+    :cond_1
+    const/4 p1, 0x3
+
+    .line 7
+    invoke-virtual {v1, p1}, Lba;->OooO00o(I)V
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    const-string v3, "Unable to bind Lens service due to security exception."
+
+    .line 8
+    invoke-static {v0, v3, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    sget p1, Lbh;->j:I
+
+    iput p1, v1, Lba;->h:I
+
+    .line 9
+    invoke-virtual {v1, v2}, Lba;->OooO00o(I)V
+
+    return-void
+
+    .line 10
+    :cond_2
+    iget p1, p1, Lbi;->d:I
+
+    .line 11
+    invoke-static {p1}, Lbh;->OooO00o(I)I
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    sget p1, Lbh;->a:I
+
+    :cond_3
+    iput p1, v1, Lba;->h:I
+
+    const/4 p1, 0x6
+
+    .line 12
+    invoke-virtual {v1, p1}, Lba;->OooO00o(I)V
+
+    return-void
+.end method

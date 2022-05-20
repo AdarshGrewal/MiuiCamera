@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@id/extend_time_watermark_1" android:visibility="invisible" android:layout_width="@dimen/extend_time_watermark_1_width" android:layout_height="@dimen/extend_time_watermark_1_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/extend_time_watermark_1_hour_text_size" android:textColor="#ffffffff" android:gravity="center" android:id="@id/extend_hour" android:layout_width="@dimen/extend_time_watermark_1_hour_width" android:layout_height="@dimen/extend_time_watermark_1_hour_height" android:importantForAccessibility="no" android:fontFamily="mitype" android:textAlignment="center" />
+    <TextView android:textSize="@dimen/extend_time_watermark_1_month_text_size" android:textColor="#b2ffffff" android:gravity="center" android:id="@id/extend_month" android:layout_width="@dimen/extend_time_watermark_1_month_width" android:layout_height="@dimen/extend_time_watermark_1_month_height" android:layout_marginTop="@dimen/extend_time_watermark_1_month_margin_top" android:importantForAccessibility="no" android:fontFamily="mipro-light" android:letterSpacing="0.1" />
+</LinearLayout>

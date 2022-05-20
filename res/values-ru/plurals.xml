@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="a_hour_ago">
+        <item quantity="other">Час назад</item>
+        <item quantity="one">Час назад</item>
+        <item quantity="few">Час назад</item>
+        <item quantity="many">Час назад</item>
+    </plurals>
+    <plurals name="abbrev_a_hour_ago">
+        <item quantity="other">Час назад</item>
+        <item quantity="one">Час назад</item>
+        <item quantity="few">Час назад</item>
+        <item quantity="many">Час назад</item>
+    </plurals>
+    <plurals name="abbrev_half_hour_ago">
+        <item quantity="other">Полчаса назад</item>
+        <item quantity="one">Полчаса назад</item>
+        <item quantity="few">Полчаса назад</item>
+        <item quantity="many">Полчаса назад</item>
+    </plurals>
+    <plurals name="abbrev_in_a_hour">
+        <item quantity="other">Через 1 час</item>
+        <item quantity="one">Через 1 час</item>
+        <item quantity="few">Через 1 час</item>
+        <item quantity="many">Через 1 час</item>
+    </plurals>
+    <plurals name="abbrev_in_half_hour">
+        <item quantity="other">Через полчаса</item>
+        <item quantity="one">Через полчаса</item>
+        <item quantity="few">Через полчаса</item>
+        <item quantity="many">Через полчаса</item>
+    </plurals>
+    <plurals name="abbrev_in_less_than_one_minute">
+        <item quantity="other">Немедленно</item>
+        <item quantity="one">Немедленно</item>
+        <item quantity="few">Немедленно</item>
+        <item quantity="many">Немедленно</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item quantity="other">через %d мин</item>
+        <item quantity="one">через 1 мин</item>
+        <item quantity="few">через %d мин</item>
+        <item quantity="many">через %d мин</item>
+    </plurals>
+    <plurals name="abbrev_less_than_one_minute_ago">
+        <item quantity="other">Только что</item>
+        <item quantity="one">Только что</item>
+        <item quantity="few">Только что</item>
+        <item quantity="many">Только что</item>
+    </plurals>
+    <plurals name="abbrev_num_minutes_ago">
+        <item quantity="other">%d мин назад</item>
+        <item quantity="one">1 мин назад</item>
+        <item quantity="few">%d мин назад</item>
+        <item quantity="many">%d мин назад</item>
+    </plurals>
+    <plurals name="accessibility_focus_face_detect">
+        <item quantity="other">Сфокусировано. Найдено %d лиц</item>
+        <item quantity="one">Сфокусировано. Найдено %d лицо</item>
+        <item quantity="few">Сфокусировано. Найдено %d лица</item>
+        <item quantity="many">Сфокусировано. Найдено %d лиц</item>
+    </plurals>
+    <plurals name="accessibility_timer_burst_count">
+        <item quantity="other">%d снимков в серии</item>
+        <item quantity="one">%d снимок в серии</item>
+        <item quantity="few">%d снимка в серии</item>
+        <item quantity="many">%d снимков в серии</item>
+    </plurals>
+    <plurals name="accessibility_timer_burst_interval">
+        <item quantity="other">Интервал: %d секунд</item>
+        <item quantity="one">Интервал: %d секунда</item>
+        <item quantity="few">Интервал: %d секунды</item>
+        <item quantity="many">Интервал: %d секунд</item>
+    </plurals>
+    <plurals name="accessibility_vv_duartion">
+        <item quantity="other">Длительность: %d секунд</item>
+        <item quantity="one">Длительность: %d секунда</item>
+        <item quantity="few">Длительность: %d секунды</item>
+        <item quantity="many">Длительность: %d секунд</item>
+    </plurals>
+    <plurals name="clone_guide_tip2">
+        <item quantity="other">Вы можете создать не более %d клонов за раз.</item>
+        <item quantity="one">Вы можете создать не более %d клона за раз.</item>
+        <item quantity="few">Вы можете создать не более %d клонов за раз.</item>
+        <item quantity="many">Вы можете создать не более %d клонов за раз.</item>
+    </plurals>
+    <plurals name="exit_camera_hint">
+        <item quantity="other">&lt;Data>Сбой подключения к камере.&lt;br>Это приложение будет закрыто через &lt;font color=#FFCE16>&lt;b>%1$d секунд&lt;/b>&lt;/font>. После этого подождите немного и повторите попытку.&lt;/Data></item>
+        <item quantity="one">&lt;Data>Сбой подключения к камере.&lt;br>Это приложение будет закрыто через &lt;font color=#FFCE16>&lt;b>%1$d секунду&lt;/b>&lt;/font>. После этого подождите немного и повторите попытку.&lt;/Data></item>
+        <item quantity="few">&lt;Data>Сбой подключения к камере.&lt;br>Это приложение будет закрыто через &lt;font color=#FFCE16>&lt;b>%1$d секунды&lt;/b>&lt;/font>. После этого подождите немного и повторите попытку.&lt;/Data></item>
+        <item quantity="many">&lt;Data>Сбой подключения к камере.&lt;br>Это приложение будет закрыто через &lt;font color=#FFCE16>&lt;b>%1$d секунд&lt;/b>&lt;/font>. После этого подождите немного и повторите попытку.&lt;/Data></item>
+    </plurals>
+    <plurals name="exit_thermal_hint">
+        <item quantity="other">&lt;Data>Перегрев устройства.&lt;br>Это приложение будет закрыто через &lt;font color=#FFCE16>&lt;b>%1$d секунд&lt;/b>&lt;/font>. Текущий прогресс был сохранен автоматически.&lt;/Data></item>
+        <item quantity="one">&lt;Data>Перегрев устройства.&lt;br>Это приложение будет закрыто через &lt;font color=#FFCE16>&lt;b>%1$d секунду&lt;/b>&lt;/font>. Текущий прогресс был сохранен автоматически.&lt;/Data></item>
+        <item quantity="few">&lt;Data>Перегрев устройства.&lt;br>Это приложение будет закрыто через &lt;font color=#FFCE16>&lt;b>%1$d секунды&lt;/b>&lt;/font>. Текущий прогресс был сохранен автоматически.&lt;/Data></item>
+        <item quantity="many">&lt;Data>Перегрев устройства.&lt;br>Это приложение будет закрыто через &lt;font color=#FFCE16>&lt;b>%1$d секунд&lt;/b>&lt;/font>. Текущий прогресс был сохранен автоматически.&lt;/Data></item>
+    </plurals>
+    <plurals name="fastmotion_pro_min_unit">
+        <item quantity="other">%1$d мин</item>
+        <item quantity="one">%1$d мин</item>
+        <item quantity="few">%1$d мин</item>
+        <item quantity="many">%1$d мин</item>
+    </plurals>
+    <plurals name="fastmotion_pro_sec_unit">
+        <item quantity="other">%1$d с</item>
+        <item quantity="one">%1$d с</item>
+        <item quantity="few">%1$d с</item>
+        <item quantity="many">%1$d с</item>
+    </plurals>
+    <plurals name="half_hour_ago">
+        <item quantity="other">Полчаса назад</item>
+        <item quantity="one">Полчаса назад</item>
+        <item quantity="few">Полчаса назад</item>
+        <item quantity="many">Полчаса назад</item>
+    </plurals>
+    <plurals name="in_a_hour">
+        <item quantity="other">Через 1 час</item>
+        <item quantity="one">Через 1 час</item>
+        <item quantity="few">Через 1 час</item>
+        <item quantity="many">Через 1 час</item>
+    </plurals>
+    <plurals name="in_half_hour">
+        <item quantity="other">Через полчаса</item>
+        <item quantity="one">Через полчаса</item>
+        <item quantity="few">Через полчаса</item>
+        <item quantity="many">Через полчаса</item>
+    </plurals>
+    <plurals name="in_less_than_one_minute">
+        <item quantity="other">Немедленно</item>
+        <item quantity="one">Немедленно</item>
+        <item quantity="few">Немедленно</item>
+        <item quantity="many">Немедленно</item>
+    </plurals>
+    <plurals name="in_num_minutes">
+        <item quantity="other">через %d мин</item>
+        <item quantity="one">через 1 мин</item>
+        <item quantity="few">через %d мин</item>
+        <item quantity="many">через %d мин</item>
+    </plurals>
+    <plurals name="less_than_one_minute_ago">
+        <item quantity="other">Только что</item>
+        <item quantity="one">Только что</item>
+        <item quantity="few">Только что</item>
+        <item quantity="many">Только что</item>
+    </plurals>
+    <plurals name="live_workspace_delete_dialog_title">
+        <item quantity="other">Удалить %1$d черновиков?</item>
+        <item quantity="one">Удалить %1$d черновик?</item>
+        <item quantity="few">Удалить %1$d черновика?</item>
+        <item quantity="many">Удалить %1$d черновиков?</item>
+    </plurals>
+    <plurals name="miuix_appcompat_items_selected">
+        <item quantity="other">Выбрано: %d</item>
+        <item quantity="one">Выбрано: %d</item>
+        <item quantity="few">Выбрано: %d</item>
+        <item quantity="many">Выбрано: %d</item>
+    </plurals>
+    <plurals name="num_minutes_ago">
+        <item quantity="other">%d мин назад</item>
+        <item quantity="one">1 мин назад</item>
+        <item quantity="few">%d мин назад</item>
+        <item quantity="many">%d мин назад</item>
+    </plurals>
+    <plurals name="pref_camera_fastmotion_duration_unit">
+        <item quantity="other">%1$s мин</item>
+        <item quantity="one">%1$s мин</item>
+        <item quantity="few">%1$s мин</item>
+        <item quantity="many">%1$s мин</item>
+    </plurals>
+    <plurals name="pref_live_duration_prompt">
+        <item quantity="other">Запись %d с</item>
+        <item quantity="one">Запись %d с</item>
+        <item quantity="few">Запись %d с</item>
+        <item quantity="many">Запись %d с</item>
+    </plurals>
+    <plurals name="timefreeze_guide_tip1">
+        <item quantity="other">Записывать видео с остановкой времени можно только с %d людьми в кадре.</item>
+        <item quantity="one">Записывать видео с остановкой времени можно только с %d человеком в кадре.</item>
+        <item quantity="few">Записывать видео с остановкой времени можно только с %d людьми в кадре.</item>
+        <item quantity="many">Записывать видео с остановкой времени можно только с %d людьми в кадре.</item>
+    </plurals>
+    <plurals name="timer_burst_setting_total_count">
+        <item quantity="other">%1$s фото</item>
+        <item quantity="one">%1$s фото</item>
+        <item quantity="few">%1$s фото</item>
+        <item quantity="many">%1$s фото</item>
+    </plurals>
+    <plurals name="toast_burst_snap_finished_summary">
+        <item quantity="other">Серийная съемка завершена, снято %1$s фото</item>
+        <item quantity="one">Серийная съемка завершена, снято %1$s фото</item>
+        <item quantity="few">Серийная съемка завершена, снято %1$s фото</item>
+        <item quantity="many">Серийная съемка завершена, снято %1$s фото</item>
+    </plurals>
+</resources>

@@ -1,0 +1,205 @@
+.class public Lnet/majorkernelpanic/streaming/audio/AMRNBStream;
+.super Lnet/majorkernelpanic/streaming/audio/AudioStream;
+.source "AMRNBStream.java"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    .line 1
+    invoke-direct {p0}, Lnet/majorkernelpanic/streaming/audio/AudioStream;-><init>()V
+
+    .line 2
+    new-instance v0, Lnet/majorkernelpanic/streaming/rtp/AMRNBPacketizer;
+
+    invoke-direct {v0}, Lnet/majorkernelpanic/streaming/rtp/AMRNBPacketizer;-><init>()V
+
+    iput-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mPacketizer:Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;
+
+    const/4 v0, 0x5
+
+    .line 3
+    invoke-virtual {p0, v0}, Lnet/majorkernelpanic/streaming/audio/AudioStream;->setAudioSource(I)V
+
+    .line 4
+    :try_start_0
+    const-class v0, Landroid/media/MediaRecorder$OutputFormat;
+
+    const-string v1, "RAW_AMR"
+
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    .line 5
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lnet/majorkernelpanic/streaming/audio/AudioStream;->setOutputFormat(I)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const/4 v0, 0x3
+
+    .line 6
+    invoke-virtual {p0, v0}, Lnet/majorkernelpanic/streaming/audio/AudioStream;->setOutputFormat(I)V
+
+    :goto_0
+    const/4 v0, 0x1
+
+    .line 7
+    invoke-virtual {p0, v0}, Lnet/majorkernelpanic/streaming/audio/AudioStream;->setAudioEncoder(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public declared-synchronized configure()V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/IllegalStateException;,
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    invoke-super {p0}, Lnet/majorkernelpanic/streaming/MediaStream;->configure()V
+
+    const/4 v0, 0x1
+
+    .line 2
+    iput-byte v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMode:B
+
+    .line 3
+    iget-object v0, p0, Lnet/majorkernelpanic/streaming/audio/AudioStream;->mRequestedQuality:Lnet/majorkernelpanic/streaming/audio/AudioQuality;
+
+    invoke-static {v0}, Lnet/majorkernelpanic/streaming/audio/AudioQuality;->copyOf(Lnet/majorkernelpanic/streaming/audio/AudioQuality;)Lnet/majorkernelpanic/streaming/audio/AudioQuality;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lnet/majorkernelpanic/streaming/audio/AudioStream;->mQuality:Lnet/majorkernelpanic/streaming/audio/AudioQuality;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 4
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public encodeWithMediaCodec()V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0}, Lnet/majorkernelpanic/streaming/audio/AudioStream;->encodeWithMediaRecorder()V
+
+    return-void
+.end method
+
+.method public getSessionDescription()Ljava/lang/String;
+    .locals 3
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "m=audio "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lnet/majorkernelpanic/streaming/MediaStream;->getDestinationPorts()[I
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    aget v1, v1, v2
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " RTP/AVP 96\r\n"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "a=rtpmap:96 AMR/8000\r\n"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "a=fmtp:96 octet-align=1;\r\n"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public declared-synchronized start()V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/IllegalStateException;,
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-boolean v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mStreaming:Z
+
+    if-nez v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Lnet/majorkernelpanic/streaming/audio/AMRNBStream;->configure()V
+
+    .line 3
+    invoke-super {p0}, Lnet/majorkernelpanic/streaming/MediaStream;->start()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 4
+    :cond_0
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method

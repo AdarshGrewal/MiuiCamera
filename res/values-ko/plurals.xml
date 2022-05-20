@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="a_hour_ago">
+        <item quantity="other">1시간 전</item>
+    </plurals>
+    <plurals name="abbrev_a_hour_ago">
+        <item quantity="other">1시간 전</item>
+    </plurals>
+    <plurals name="abbrev_half_hour_ago">
+        <item quantity="other">30분 전</item>
+    </plurals>
+    <plurals name="abbrev_in_a_hour">
+        <item quantity="other">1시간 후</item>
+    </plurals>
+    <plurals name="abbrev_in_half_hour">
+        <item quantity="other">30분 후</item>
+    </plurals>
+    <plurals name="abbrev_in_less_than_one_minute">
+        <item quantity="other">방금</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item quantity="other">%d분 후</item>
+    </plurals>
+    <plurals name="abbrev_less_than_one_minute_ago">
+        <item quantity="other">방금</item>
+    </plurals>
+    <plurals name="abbrev_num_minutes_ago">
+        <item quantity="other">%d분 전</item>
+    </plurals>
+    <plurals name="accessibility_focus_face_detect">
+        <item quantity="other">포커스됨, %d개의 얼굴 감지됨</item>
+    </plurals>
+    <plurals name="accessibility_timer_burst_count">
+        <item quantity="other">연속 촬영 %d장</item>
+    </plurals>
+    <plurals name="accessibility_timer_burst_interval">
+        <item quantity="other">간격: %d초</item>
+    </plurals>
+    <plurals name="accessibility_vv_duartion">
+        <item quantity="other">기간: %d초</item>
+    </plurals>
+    <plurals name="clone_guide_tip2">
+        <item quantity="other">한 번에 최대 %d개의 클론 생성 가능</item>
+    </plurals>
+    <plurals name="exit_camera_hint">
+        <item quantity="other">&lt;Data>카메라에 연결할 수 없습니다.&lt;br>앱이 &lt;font color=#FFCE16>&lt;b>%1$d초&lt;/b>&lt;/font> 후에 종료될 것입니다. 1-2분 정도 기다리신 후 다시 시도하십시오.&lt;/Data></item>
+    </plurals>
+    <plurals name="exit_thermal_hint">
+        <item quantity="other">&lt;Data>기기가 과열됐습니다.&lt;br>앱이 &lt;font color=#FFCE16>&lt;b>%1$d초&lt;/b>&lt;/font> 후에 종료될 것입니다. 현재 진행 과정은 자동으로 저장될 것입니다.&lt;/Data></item>
+    </plurals>
+    <plurals name="fastmotion_pro_min_unit">
+        <item quantity="other">%1$d분</item>
+    </plurals>
+    <plurals name="fastmotion_pro_sec_unit">
+        <item quantity="other">%1$d초</item>
+    </plurals>
+    <plurals name="half_hour_ago">
+        <item quantity="other">30분 전</item>
+    </plurals>
+    <plurals name="in_a_hour">
+        <item quantity="other">1시간 후</item>
+    </plurals>
+    <plurals name="in_half_hour">
+        <item quantity="other">30분 후</item>
+    </plurals>
+    <plurals name="in_less_than_one_minute">
+        <item quantity="other">방금</item>
+    </plurals>
+    <plurals name="in_num_minutes">
+        <item quantity="other">%d분 후</item>
+    </plurals>
+    <plurals name="less_than_one_minute_ago">
+        <item quantity="other">방금</item>
+    </plurals>
+    <plurals name="live_workspace_delete_dialog_title">
+        <item quantity="other">%1$d개 작성 중인 글을 삭제하시겠습니까?</item>
+    </plurals>
+    <plurals name="miuix_appcompat_items_selected">
+        <item quantity="other">%d개 항목 선택됨</item>
+    </plurals>
+    <plurals name="num_minutes_ago">
+        <item quantity="other">%d분 전</item>
+    </plurals>
+    <plurals name="pref_camera_fastmotion_duration_unit">
+        <item quantity="other">%1$s분</item>
+    </plurals>
+    <plurals name="pref_live_duration_prompt">
+        <item quantity="other">%d초 녹화</item>
+    </plurals>
+    <plurals name="timefreeze_guide_tip1">
+        <item quantity="other">최대 %d개의 대상 타임 프리즈 동영상 촬영 가능</item>
+    </plurals>
+    <plurals name="timer_burst_setting_total_count">
+        <item quantity="other">%1$s개 사진</item>
+    </plurals>
+    <plurals name="toast_burst_snap_finished_summary">
+        <item quantity="other">연속 촬영 완료, %1$s장의 사진 촬영됨</item>
+    </plurals>
+</resources>

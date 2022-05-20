@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.camera.ui.DragLayout android:id="@id/drag_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/drag_layout_children" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/popup_more_mode_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/mode_select_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.android.camera.ui.CapsuleLayout android:layout_gravity="center" android:id="@id/bottom_external_mode_root" android:focusable="false" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:target="@id/bottom_external_mode_layout">
+                <FrameLayout android:id="@id/bottom_external_mode_layout" android:background="@drawable/bg_external_mode_bg" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/mode_tips_padding_start" android:paddingEnd="@dimen/mode_tips_padding_end">
+                    <ImageView android:layout_gravity="end|center" android:id="@id/bottom_external_mode_close" android:focusable="false" android:layout_width="@dimen/mode_tips_icon_size" android:layout_height="@dimen/mode_tips_icon_size" android:src="@drawable/ic_mode_tips_close" android:scaleType="fitXY" />
+                    <com.android.camera.ui.AdaptiveTextView android:textSize="@dimen/mode_tips_item_text_size" android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:layout_gravity="end|center" android:id="@id/bottom_external_mode_text" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scrollHorizontally="true" android:singleLine="true" android:layout_marginEnd="@dimen/mode_tips_gap" android:layout_marginVertical="@dimen/mode_tips_item_text_margin_ver" />
+                </FrameLayout>
+            </com.android.camera.ui.CapsuleLayout>
+            <com.android.camera.ui.EdgeHorizonScrollView android:layout_gravity="center_horizontal" android:id="@id/mode_select_scrollview" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.android.camera.ui.ModeSelectView android:id="@id/mode_select_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mode_select_margin_top" />
+            </com.android.camera.ui.EdgeHorizonScrollView>
+        </FrameLayout>
+    </FrameLayout>
+</com.android.camera.ui.DragLayout>

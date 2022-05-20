@@ -1,0 +1,748 @@
+.class public Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;
+.super Lcom/android/camera/visibilityutils/calculator/BaseItemsVisibilityCalculator;
+.source "SingleListViewItemActiveCalculator.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator$Callback;
+    }
+.end annotation
+
+
+# static fields
+.field public static final INACTIVE_LIST_ITEM_VISIBILITY_PERCENTS:I = 0x46
+
+.field public static final SHOW_LOGS:Z = false
+
+.field public static final TAG:Ljava/lang/String; = "SingleListViewItemActiveCalculator"
+
+
+# instance fields
+.field public final mCallback:Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator$Callback;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator$Callback<",
+            "Lcom/android/camera/visibilityutils/items/ListItem;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public final mCurrentItem:Lcom/android/camera/visibilityutils/items/ListItemData;
+
+.field public final mListItems:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "+",
+            "Lcom/android/camera/visibilityutils/items/ListItem;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public mScrollDirection:Lcom/android/camera/visibilityutils/scroll_utils/ScrollDirectionDetector$ScrollDirection;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator$Callback;Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator$Callback<",
+            "Lcom/android/camera/visibilityutils/items/ListItem;",
+            ">;",
+            "Ljava/util/List<",
+            "+",
+            "Lcom/android/camera/visibilityutils/items/ListItem;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera/visibilityutils/calculator/BaseItemsVisibilityCalculator;-><init>()V
+
+    .line 2
+    sget-object v0, Lcom/android/camera/visibilityutils/scroll_utils/ScrollDirectionDetector$ScrollDirection;->UP:Lcom/android/camera/visibilityutils/scroll_utils/ScrollDirectionDetector$ScrollDirection;
+
+    iput-object v0, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mScrollDirection:Lcom/android/camera/visibilityutils/scroll_utils/ScrollDirectionDetector$ScrollDirection;
+
+    .line 3
+    new-instance v0, Lcom/android/camera/visibilityutils/items/ListItemData;
+
+    invoke-direct {v0}, Lcom/android/camera/visibilityutils/items/ListItemData;-><init>()V
+
+    iput-object v0, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mCurrentItem:Lcom/android/camera/visibilityutils/items/ListItemData;
+
+    .line 4
+    iput-object p1, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mCallback:Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator$Callback;
+
+    .line 5
+    iput-object p2, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mListItems:Ljava/util/List;
+
+    return-void
+.end method
+
+.method private bottomToTopMostVisibleItem(Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;ILcom/android/camera/visibilityutils/items/ListItemData;)V
+    .locals 4
+
+    .line 1
+    invoke-interface {p1}, Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;->getLastVisiblePosition()I
+
+    move-result v0
+
+    invoke-virtual {p3}, Lcom/android/camera/visibilityutils/items/ListItemData;->getView()Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-interface {p1, v1}, Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;->indexOfChild(Landroid/view/View;)I
+
+    move-result v1
+
+    :goto_0
+    if-ltz v1, :cond_2
+
+    .line 2
+    iget-object v2, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mListItems:Ljava/util/List;
+
+    invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/camera/visibilityutils/items/ListItem;
+
+    .line 3
+    invoke-interface {p1, v1}, Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v3
+
+    .line 4
+    invoke-interface {v2, v3}, Lcom/android/camera/visibilityutils/items/ListItem;->getVisibilityPercents(Landroid/view/View;)I
+
+    move-result v2
+
+    if-le v2, p2, :cond_0
+
+    .line 5
+    invoke-virtual {p3, v0, v3}, Lcom/android/camera/visibilityutils/items/ListItemData;->fillWithData(ILandroid/view/View;)Lcom/android/camera/visibilityutils/items/ListItemData;
+
+    move p2, v2
+
+    .line 6
+    :cond_0
+    iget-object v2, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mCurrentItem:Lcom/android/camera/visibilityutils/items/ListItemData;
+
+    invoke-virtual {v2}, Lcom/android/camera/visibilityutils/items/ListItemData;->getView()Landroid/view/View;
+
+    move-result-object v2
+
+    .line 7
+    invoke-virtual {p3}, Lcom/android/camera/visibilityutils/items/ListItemData;->getView()Landroid/view/View;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    const/4 v2, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v2, 0x0
+
+    .line 8
+    :goto_1
+    invoke-virtual {p3, v2}, Lcom/android/camera/visibilityutils/items/ListItemData;->setMostVisibleItemChanged(Z)V
+
+    add-int/lit8 v0, v0, -0x1
+
+    add-int/lit8 v1, v1, -0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-void
+.end method
+
+.method private calculateActiveItem(Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;Lcom/android/camera/visibilityutils/items/ListItemData;)V
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mListItems:Ljava/util/List;
+
+    invoke-virtual {p2, v0}, Lcom/android/camera/visibilityutils/items/ListItemData;->getVisibilityPercents(Ljava/util/List;)I
+
+    move-result v0
+
+    .line 2
+    new-instance v1, Lcom/android/camera/visibilityutils/items/ListItemData;
+
+    invoke-direct {v1}, Lcom/android/camera/visibilityutils/items/ListItemData;-><init>()V
+
+    .line 3
+    sget-object v2, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator$1;->$SwitchMap$com$android$camera$visibilityutils$scroll_utils$ScrollDirectionDetector$ScrollDirection:[I
+
+    iget-object v3, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mScrollDirection:Lcom/android/camera/visibilityutils/scroll_utils/ScrollDirectionDetector$ScrollDirection;
+
+    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v3
+
+    aget v2, v2, v3
+
+    const/4 v3, 0x1
+
+    if-eq v2, v3, :cond_1
+
+    const/4 v3, 0x2
+
+    if-eq v2, v3, :cond_0
+
+    goto :goto_0
+
+    .line 4
+    :cond_0
+    invoke-direct {p0, p1, p2, v1}, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->findNextItem(Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;Lcom/android/camera/visibilityutils/items/ListItemData;Lcom/android/camera/visibilityutils/items/ListItemData;)V
+
+    goto :goto_0
+
+    .line 5
+    :cond_1
+    invoke-direct {p0, p1, p2, v1}, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->findPreviousItem(Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;Lcom/android/camera/visibilityutils/items/ListItemData;Lcom/android/camera/visibilityutils/items/ListItemData;)V
+
+    .line 6
+    :goto_0
+    invoke-direct {p0, v0}, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->enoughPercentsForDeactivation(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {v1}, Lcom/android/camera/visibilityutils/items/ListItemData;->isAvailable()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    .line 7
+    invoke-direct {p0, v1}, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->setCurrentItem(Lcom/android/camera/visibilityutils/items/ListItemData;)V
+
+    :cond_2
+    return-void
+.end method
+
+.method private calculateMostVisibleItem(Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;II)V
+    .locals 2
+
+    .line 1
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->getMockCurrentItem(Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;II)Lcom/android/camera/visibilityutils/items/ListItemData;
+
+    move-result-object p2
+
+    .line 2
+    iget-object p3, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mListItems:Ljava/util/List;
+
+    invoke-virtual {p2, p3}, Lcom/android/camera/visibilityutils/items/ListItemData;->getVisibilityPercents(Ljava/util/List;)I
+
+    move-result p3
+
+    .line 3
+    sget-object v0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator$1;->$SwitchMap$com$android$camera$visibilityutils$scroll_utils$ScrollDirectionDetector$ScrollDirection:[I
+
+    iget-object v1, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mScrollDirection:Lcom/android/camera/visibilityutils/scroll_utils/ScrollDirectionDetector$ScrollDirection;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    aget v0, v0, v1
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    .line 4
+    invoke-direct {p0, p1, p3, p2}, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->topToBottomMostVisibleItem(Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;ILcom/android/camera/visibilityutils/items/ListItemData;)V
+
+    goto :goto_0
+
+    .line 5
+    :cond_0
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p3, "not handled mScrollDirection "
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p3, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mScrollDirection:Lcom/android/camera/visibilityutils/scroll_utils/ScrollDirectionDetector$ScrollDirection;
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 6
+    :cond_1
+    invoke-direct {p0, p1, p3, p2}, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->bottomToTopMostVisibleItem(Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;ILcom/android/camera/visibilityutils/items/ListItemData;)V
+
+    .line 7
+    :goto_0
+    invoke-virtual {p2}, Lcom/android/camera/visibilityutils/items/ListItemData;->isMostVisibleItemChanged()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    .line 8
+    invoke-direct {p0, p2}, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->setCurrentItem(Lcom/android/camera/visibilityutils/items/ListItemData;)V
+
+    :cond_2
+    return-void
+.end method
+
+.method private enoughPercentsForDeactivation(I)Z
+    .locals 1
+
+    const/16 v0, 0x46
+
+    if-gt p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+.end method
+
+.method private findNextItem(Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;Lcom/android/camera/visibilityutils/items/ListItemData;Lcom/android/camera/visibilityutils/items/ListItemData;)V
+    .locals 2
+
+    .line 1
+    invoke-virtual {p2}, Lcom/android/camera/visibilityutils/items/ListItemData;->getIndex()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    .line 2
+    iget-object v1, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mListItems:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_0
+
+    .line 3
+    invoke-virtual {p2}, Lcom/android/camera/visibilityutils/items/ListItemData;->getView()Landroid/view/View;
+
+    move-result-object p2
+
+    invoke-interface {p1, p2}, Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;->indexOfChild(Landroid/view/View;)I
+
+    move-result p2
+
+    if-ltz p2, :cond_0
+
+    add-int/lit8 p2, p2, 0x1
+
+    .line 4
+    invoke-interface {p1, p2}, Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;->getChildAt(I)Landroid/view/View;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 5
+    iget-object p2, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mListItems:Ljava/util/List;
+
+    invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lcom/android/camera/visibilityutils/items/ListItem;
+
+    .line 6
+    invoke-interface {p2, p1}, Lcom/android/camera/visibilityutils/items/ListItem;->getVisibilityPercents(Landroid/view/View;)I
+
+    .line 7
+    invoke-virtual {p3, v0, p1}, Lcom/android/camera/visibilityutils/items/ListItemData;->fillWithData(ILandroid/view/View;)Lcom/android/camera/visibilityutils/items/ListItemData;
+
+    :cond_0
+    return-void
+.end method
+
+.method private findPreviousItem(Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;Lcom/android/camera/visibilityutils/items/ListItemData;Lcom/android/camera/visibilityutils/items/ListItemData;)V
+    .locals 1
+
+    .line 1
+    invoke-virtual {p2}, Lcom/android/camera/visibilityutils/items/ListItemData;->getIndex()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    if-ltz v0, :cond_0
+
+    .line 2
+    invoke-virtual {p2}, Lcom/android/camera/visibilityutils/items/ListItemData;->getView()Landroid/view/View;
+
+    move-result-object p2
+
+    invoke-interface {p1, p2}, Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;->indexOfChild(Landroid/view/View;)I
+
+    move-result p2
+
+    if-lez p2, :cond_0
+
+    add-int/lit8 p2, p2, -0x1
+
+    .line 3
+    invoke-interface {p1, p2}, Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;->getChildAt(I)Landroid/view/View;
+
+    move-result-object p1
+
+    .line 4
+    iget-object p2, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mListItems:Ljava/util/List;
+
+    invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lcom/android/camera/visibilityutils/items/ListItem;
+
+    .line 5
+    invoke-interface {p2, p1}, Lcom/android/camera/visibilityutils/items/ListItem;->getVisibilityPercents(Landroid/view/View;)I
+
+    .line 6
+    invoke-virtual {p3, v0, p1}, Lcom/android/camera/visibilityutils/items/ListItemData;->fillWithData(ILandroid/view/View;)Lcom/android/camera/visibilityutils/items/ListItemData;
+
+    :cond_0
+    return-void
+.end method
+
+.method private getMockCurrentItem(Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;II)Lcom/android/camera/visibilityutils/items/ListItemData;
+    .locals 2
+
+    .line 1
+    sget-object v0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator$1;->$SwitchMap$com$android$camera$visibilityutils$scroll_utils$ScrollDirectionDetector$ScrollDirection:[I
+
+    iget-object v1, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mScrollDirection:Lcom/android/camera/visibilityutils/scroll_utils/ScrollDirectionDetector$ScrollDirection;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    aget v0, v0, v1
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_1
+
+    const/4 p3, 0x2
+
+    if-ne v0, p3, :cond_0
+
+    .line 2
+    new-instance p3, Lcom/android/camera/visibilityutils/items/ListItemData;
+
+    invoke-direct {p3}, Lcom/android/camera/visibilityutils/items/ListItemData;-><init>()V
+
+    const/4 v0, 0x0
+
+    invoke-interface {p1, v0}, Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;->getChildAt(I)Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-virtual {p3, p2, p1}, Lcom/android/camera/visibilityutils/items/ListItemData;->fillWithData(ILandroid/view/View;)Lcom/android/camera/visibilityutils/items/ListItemData;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    .line 3
+    :cond_0
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p3, "not handled mScrollDirection "
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p3, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mScrollDirection:Lcom/android/camera/visibilityutils/scroll_utils/ScrollDirectionDetector$ScrollDirection;
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    if-gez p3, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move p2, p3
+
+    .line 4
+    :goto_0
+    new-instance p3, Lcom/android/camera/visibilityutils/items/ListItemData;
+
+    invoke-direct {p3}, Lcom/android/camera/visibilityutils/items/ListItemData;-><init>()V
+
+    invoke-interface {p1}, Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;->getChildCount()I
+
+    move-result v0
+
+    sub-int/2addr v0, v1
+
+    invoke-interface {p1, v0}, Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;->getChildAt(I)Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-virtual {p3, p2, p1}, Lcom/android/camera/visibilityutils/items/ListItemData;->fillWithData(ILandroid/view/View;)Lcom/android/camera/visibilityutils/items/ListItemData;
+
+    move-result-object p1
+
+    :goto_1
+    return-object p1
+.end method
+
+.method private setCurrentItem(Lcom/android/camera/visibilityutils/items/ListItemData;)V
+    .locals 3
+
+    .line 1
+    invoke-virtual {p1}, Lcom/android/camera/visibilityutils/items/ListItemData;->getIndex()I
+
+    move-result v0
+
+    .line 2
+    invoke-virtual {p1}, Lcom/android/camera/visibilityutils/items/ListItemData;->getView()Landroid/view/View;
+
+    move-result-object p1
+
+    .line 3
+    iget-object v1, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mCurrentItem:Lcom/android/camera/visibilityutils/items/ListItemData;
+
+    invoke-virtual {v1, v0, p1}, Lcom/android/camera/visibilityutils/items/ListItemData;->fillWithData(ILandroid/view/View;)Lcom/android/camera/visibilityutils/items/ListItemData;
+
+    .line 4
+    iget-object v1, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mCallback:Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator$Callback;
+
+    iget-object v2, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mListItems:Ljava/util/List;
+
+    .line 5
+    invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/camera/visibilityutils/items/ListItem;
+
+    .line 6
+    invoke-interface {v1, v2, p1, v0}, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator$Callback;->activateNewCurrentItem(Lcom/android/camera/visibilityutils/items/ListItem;Landroid/view/View;I)V
+
+    return-void
+.end method
+
+.method private topToBottomMostVisibleItem(Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;ILcom/android/camera/visibilityutils/items/ListItemData;)V
+    .locals 4
+
+    .line 1
+    invoke-interface {p1}, Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;->getFirstVisiblePosition()I
+
+    move-result v0
+
+    invoke-virtual {p3}, Lcom/android/camera/visibilityutils/items/ListItemData;->getView()Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-interface {p1, v1}, Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;->indexOfChild(Landroid/view/View;)I
+
+    move-result v1
+
+    .line 2
+    :goto_0
+    invoke-interface {p1}, Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;->getChildCount()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_1
+
+    .line 3
+    iget-object v2, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mListItems:Ljava/util/List;
+
+    invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/camera/visibilityutils/items/ListItem;
+
+    .line 4
+    invoke-interface {p1, v1}, Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v3
+
+    .line 5
+    invoke-interface {v2, v3}, Lcom/android/camera/visibilityutils/items/ListItem;->getVisibilityPercents(Landroid/view/View;)I
+
+    move-result v2
+
+    if-le v2, p2, :cond_0
+
+    .line 6
+    invoke-virtual {p3, v0, v3}, Lcom/android/camera/visibilityutils/items/ListItemData;->fillWithData(ILandroid/view/View;)Lcom/android/camera/visibilityutils/items/ListItemData;
+
+    move p2, v2
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    .line 7
+    :cond_1
+    iget-object p1, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mCurrentItem:Lcom/android/camera/visibilityutils/items/ListItemData;
+
+    invoke-virtual {p1}, Lcom/android/camera/visibilityutils/items/ListItemData;->getView()Landroid/view/View;
+
+    move-result-object p1
+
+    .line 8
+    invoke-virtual {p3}, Lcom/android/camera/visibilityutils/items/ListItemData;->getView()Landroid/view/View;
+
+    move-result-object p2
+
+    if-eq p1, p2, :cond_2
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    .line 9
+    :goto_1
+    invoke-virtual {p3, p1}, Lcom/android/camera/visibilityutils/items/ListItemData;->setMostVisibleItemChanged(Z)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onScrollDirectionChanged(Lcom/android/camera/visibilityutils/scroll_utils/ScrollDirectionDetector$ScrollDirection;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mScrollDirection:Lcom/android/camera/visibilityutils/scroll_utils/ScrollDirectionDetector$ScrollDirection;
+
+    return-void
+.end method
+
+.method public onScrollStateIdle(Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;II)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->calculateMostVisibleItem(Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;II)V
+
+    return-void
+.end method
+
+.method public onStateFling(Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;)V
+    .locals 3
+
+    .line 1
+    iget-object p1, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mCurrentItem:Lcom/android/camera/visibilityutils/items/ListItemData;
+
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mCallback:Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator$Callback;
+
+    iget-object v1, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mListItems:Ljava/util/List;
+
+    invoke-virtual {p1}, Lcom/android/camera/visibilityutils/items/ListItemData;->getIndex()I
+
+    move-result v2
+
+    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/camera/visibilityutils/items/ListItem;
+
+    invoke-virtual {p1}, Lcom/android/camera/visibilityutils/items/ListItemData;->getView()Landroid/view/View;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Lcom/android/camera/visibilityutils/items/ListItemData;->getIndex()I
+
+    move-result p1
+
+    invoke-interface {v0, v1, v2, p1}, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator$Callback;->deactivateCurrentItem(Lcom/android/camera/visibilityutils/items/ListItem;Landroid/view/View;I)V
+
+    return-void
+.end method
+
+.method public onStateTouchScroll(Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;)V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->mCurrentItem:Lcom/android/camera/visibilityutils/items/ListItemData;
+
+    .line 2
+    invoke-virtual {v0}, Lcom/android/camera/visibilityutils/items/ListItemData;->isAvailable()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 3
+    sget-object p1, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->TAG:Ljava/lang/String;
+
+    const-string/jumbo v0, "onStateTouchScroll ignore, currentItem not available"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    .line 4
+    :cond_0
+    invoke-direct {p0, p1, v0}, Lcom/android/camera/visibilityutils/calculator/SingleListViewItemActiveCalculator;->calculateActiveItem(Lcom/android/camera/visibilityutils/scroll_utils/ItemsPositionGetter;Lcom/android/camera/visibilityutils/items/ListItemData;)V
+
+    return-void
+.end method

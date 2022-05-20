@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="bottom|center" android:orientation="horizontal" android:background="@drawable/btn_bottom_capsule_tip_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/near_range_tip_text_size" android:textColor="@color/white" android:id="@id/popup_tips_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/popup_tips_near_range_mode" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/btn_bottom_capsule_tip_close_flag_top_margin" android:src="@drawable/ic_close_near_range_tip" android:layout_marginStart="@dimen/near_range_tip_drawablepadding" />
+</LinearLayout>

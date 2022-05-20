@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<miuix.nestedheader.widget.NestedScrollingLayout android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" app:scrollableView="@id/vv_work_space_list"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <miuix.recyclerview.widget.RecyclerView android:id="@id/music_recycler_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/vv_workspace_empty_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/vv_workspace_empty_margin_bottom">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_workspace_empty" />
+        <TextView android:textSize="15.269989sp" android:textColor="@color/white_alpha_40" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/vv_workspace_margin" android:text="@string/live_draft_empty" android:fontFamily="mipro-medium" />
+    </LinearLayout>
+    <miuix.recyclerview.widget.RecyclerView android:id="@id/vv_work_space_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</miuix.nestedheader.widget.NestedScrollingLayout>
