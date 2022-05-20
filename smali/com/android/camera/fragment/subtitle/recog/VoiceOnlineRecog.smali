@@ -647,7 +647,7 @@
 
     move-result-object v1
 
-    const-string v2, ""
+    const-string/jumbo v2, "wss://xiaomi-ist-api.xfyun.cn/v2/ist"
 
     .line 3
     invoke-static {v2, v0, v1}, Lcom/android/camera/fragment/subtitle/recog/AuthUtils;->assembleRequestUrl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;

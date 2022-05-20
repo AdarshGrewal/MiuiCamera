@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final OooO00o:Ljava/lang/String; = ""
+.field public static final OooO00o:Ljava/lang/String; = "wss://xiaomi-ist-api.xfyun.cn/v2/ist"
 
 
 # direct methods

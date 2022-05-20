@@ -10,7 +10,7 @@
 
 .field public static final DEBUG:Z = false
 
-.field public static final FLAVOR:Ljava/lang/String; = "global"
+.field public static final FLAVOR:Ljava/lang/String; = "cn"
 
 .field public static final VERSION_CODE:I = 0x19a1ad7d
 

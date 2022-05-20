@@ -1,6 +1,6 @@
 Signature-Version: 1.0
 X-Android-APK-Signed: 2
-SHA-256-Digest-Manifest: WxnPGNM+uyAuHr+t/UePnZBlWo4hNW0xgLxlCUk+gXE=
+SHA-256-Digest-Manifest: uvfFan2+Cwj8T+358yZqRq95N5+H7TQaqerZUw2QR0Y=
 Created-By: 1.0 (Android SignApk)
 
 Name: res/drawable-xhdpi-v4/ic_beauty_normal.webp
@@ -2027,7 +2027,7 @@ Name: res/drawable-v24/$miuix_appcompat_btn_checkbox_off_to_on_light__
 SHA-256-Digest: U3dRTjekS+5wWz+G85R1mFxHr6isI/5Z9uV0I57cB8A=
 
 Name: lib/armeabi-v7a/libcamera_sound_effect.so
-SHA-256-Digest: i33tcErGAajUZuR9JclCbDsMHMy45qUVlYN2lf+ePaM=
+SHA-256-Digest: LKIc0XVqUMobKRlLSoBrUKKG6UpM5c1c8xZQa+TFhbU=
 
 Name: res/drawable-xhdpi-v4/icon_config_ultra_wide_on.webp
 SHA-256-Digest: HafmOs0InGm8AnBpQFIgN6jVWQAdsgK3Sga6yQ8MHfY=
@@ -2903,7 +2903,7 @@ Name: res/drawable-sw411dp-420dpi-v13/ic_live_music_network_exception.
 SHA-256-Digest: H3V1E90BDNe5XGn+KHVVTyDA5acwEq13W3osuwpmxIw=
 
 Name: lib/arm64-v8a/libcamera_sound_effect.so
-SHA-256-Digest: XRG1ELVpl99OLOufV+VbpCO1MXlXrSoJoR7qSt3HxZM=
+SHA-256-Digest: UP7A0Yexz3fs/HWNDF81Ee62KAxPhwPOgLJYqc+elnI=
 
 Name: res/color/miuix_appcompat_integrated_spinner_text_color_light.xm
  l
@@ -4164,6 +4164,9 @@ SHA-256-Digest: kK7JTwbqyz2AbmR7s+dlzuDYtOpD/2LdzxkWiy4EurM=
 Name: res/drawable-mdpi-v4/notification_bg_low_normal.9.png
 SHA-256-Digest: vPDmKMKiqjYmhi26bO46qs1KOttdTfXBQv3S6xgfvbk=
 
+Name: assets/sensi/sensi_words.txt
+SHA-256-Digest: fueU6I7mphPQBupmYXv1WcCUIdwD2e/e+VAzdgvg8KU=
+
 Name: res/drawable-xxhdpi-v4/ic_scene_mode_backlight_normal.webp
 SHA-256-Digest: zMS217Ij1VSrbqyxhOGAMVGw8fsJp/1Bd6S5XETXHfk=
 
@@ -5156,7 +5159,7 @@ Name: res/drawable-xxxhdpi-v4/ic_ai_scene_side_face.webp
 SHA-256-Digest: ljW4LMPOW3dw5UrAD8j3gg7tpaS/iBAwvisjYEzeuNM=
 
 Name: classes3.dex
-SHA-256-Digest: +a7KNOVRkHOGR+k61twXmPbbKHtE42sRw+vI1E8ERLA=
+SHA-256-Digest: oNP2KZRZaxygxgOq/jUshIqFnb6f7HJ9r2FCh7a6lUw=
 
 Name: res/layout/ai_audio_single_top_tip_layout.xml
 SHA-256-Digest: E+fdi6C2mWOUabVvxs0OKvEW6LzRUKFrSW7Og5gySy8=
@@ -6545,7 +6548,7 @@ Name: res/drawable-sw411dp-560dpi-v13/ic_wht_2.webp
 SHA-256-Digest: iSnQGaF1wUjhXhOFb9n3w1e38Czag2DIEmbs1hmpvYo=
 
 Name: classes.dex
-SHA-256-Digest: yXmaRD1WODNtfBiGKyLRz+9TRhojPg6qWMyvS+ddL2g=
+SHA-256-Digest: jBAAwymIlN/Al10490zT7vPOC8Nv+AFayGMP8Bhjso8=
 
 Name: res/drawable-xxxhdpi-v4/ic_exposure_sun.webp
 SHA-256-Digest: YGjNF7xUzcW7P0w1l9iBpg3MWHuq2fyqcubrbzq7Lro=
@@ -7586,7 +7589,7 @@ Name: res/drawable-xxhdpi-v4/icon_eyebrow_dye_n.webp
 SHA-256-Digest: ua+wUK4ybQQbBfEsBfFlHDIc+5pQVuOyZ7JI68Uh9qI=
 
 Name: lib/arm64-v8a/libCameraEffectJNI.so
-SHA-256-Digest: Eje8ffKwP5y0hZmzQJ+WawyEDoFGiy0blcNbRECmCWg=
+SHA-256-Digest: gA5Oo3wGaEtSDlVuLAxcv2jO5NKH77VR7PonzLBDoRY=
 
 Name: res/drawable/bg_id_card_drawable_layout.xml
 SHA-256-Digest: QWmcpURy0BF2eNMLS/Pj4Ewm/Jg4rb1GDCCqeKSR7GM=
@@ -10170,7 +10173,7 @@ Name: res/drawable/miuix_appcompat_btn_bg_warn_single_pressed_dark.xml
 SHA-256-Digest: 42CWTofRZp14blCsg5McwmmDZN6r39C2HBQJxAkDpDA=
 
 Name: lib/armeabi-v7a/libcamera_arcsoft_handgesture.so
-SHA-256-Digest: L6EGFhDyM8VdrN7nHauK0G1BxoHAWe90yAMj8UDEpZQ=
+SHA-256-Digest: vzbSM1fKkGt4COZd1CucnsafGC/YNEZwNr5ZSWTnGvY=
 
 Name: res/drawable/$miuix_appcompat_action_button_unfavorite_disable_d
  ark__0.xml
@@ -17396,7 +17399,7 @@ Name: res/drawable/effect_filter_item_selector_yellow.xml
 SHA-256-Digest: 6xArvQaPA8FKmRFzSYX2xjMdwjmb3OXdv0EN7Bqom8o=
 
 Name: lib/arm64-v8a/libcamera_arcsoft_handgesture.so
-SHA-256-Digest: kGWkPnQdeuT7hbAmI68vLhNRZKg6xY6gJOWXndtsbPs=
+SHA-256-Digest: mABX220ezNkEqKw9xZGrW18lxDAdZVuyxcMsbZI/XKs=
 
 Name: res/drawable-sw411dp-420dpi-v13/ic_welcome_page_document_mode.we
  bp
@@ -17491,7 +17494,7 @@ Name: res/drawable-sw411dp-560dpi-v13/color_effect_image_koizora.webp
 SHA-256-Digest: nk1hhe65POXv1wccgDj/bgj5O0AXLBnT5d6aoa5Bseg=
 
 Name: classes2.dex
-SHA-256-Digest: pvYCwxMJG4JlAVC9GK5fCn6pG3nFrFNwCQ2HtfDl2Vc=
+SHA-256-Digest: uai7MpHs8Ltq/OZIkjH48M4x+S7dkVEpvR0+D0qSiP8=
 
 Name: res/drawable/ic_id_photo_box.xml
 SHA-256-Digest: LwZLUSGKFY/0bXr02CO0O1K7X77J/2QgIv37gWUIR8w=
@@ -18252,7 +18255,7 @@ Name: res/layout/preference_value_list.xml
 SHA-256-Digest: UKzsPmYIK+iouvfoH+oxLsbaKIgNYN7VfqBfhBeMX/E=
 
 Name: lib/armeabi-v7a/libCameraEffectJNI.so
-SHA-256-Digest: IDiR1HGeMxpkeHCFBis0gYWhzPcdMVol0LHHyhR+Cnw=
+SHA-256-Digest: x0s/qDZZXFYnxeS/iCN8VA68nJdE9KhMvqpAcnFikWo=
 
 Name: res/drawable-440dpi-v4/mode_icon_portrait_kino.webp
 SHA-256-Digest: vSTLYPNvVLiPkkxXqjuRzVA+7L+UCfZ0BjGWo7kMqqI=
